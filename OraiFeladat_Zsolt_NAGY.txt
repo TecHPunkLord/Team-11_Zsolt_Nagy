@@ -1,0 +1,133 @@
+<script>
+
+//1. feladat
+
+let nev=prompt("Kerlek add meg a neved:");
+let azonosito=prompt("Kerlek add meg a csoportAzonositodat(Team#xy):");
+let html=prompt("Kerlek add meg 1-100-ig mennyire erted a HTML tananyagot:");
+let css=prompt("Kerlek add meg 1-100-ig mennyire erted a CSS tananyagot:");
+let java=prompt("Kerlek add meg 1-100-ig mennyire erted a JAVA tananyagot:");
+
+document.write(`Az On neve: ${nev} <br>Az On azonositoja: ${azonosito}<br>On ennyire erti a HTML-t(1-100): ${html}<br>
+On ennyire erti a CSS-t(1-100): ${css}<br> On ennyire erti a JAVA-t(1-100): ${java}<br>`);
+
+</script>
+
+
+
+<script>
+//2. feladat
+
+
+let szamEgy=prompt("Add meg az elso számot:");
+let szamKetto=prompt("Add meg a hatványozás mértékét:");
+
+let hatvany = (Math.pow(szamEgy, szamKetto));
+document.write(`A ${szamEgy} a ${szamKetto}. hatvanyon: ${hatvany}`);
+
+
+</script>
+
+
+<script>
+//3. feladat
+
+
+let interVallumalso=Number(prompt("Add meg az Intervallumo also erteket:"));
+let interVallumfelso=prompt("Add meg az Intervallumo felso erteket:");
+let Randomszam=Math.round(Math.random()*(interVallumfelso-interVallumalso))+interVallumalso;
+
+
+if(Randomszam % 2 == 0){
+document.write(`Az on altal megadott intervallum(${interVallumalso}-${interVallumfelso}) altal veletlen genaralt paros random szam pedig a kovetkezo: ${Randomszam}`);
+}
+else if(Randomszam != interVallumfelso)
+{
+document.write(`Az on altal megadott intervallum(${interVallumalso}-${interVallumfelso}) altal veletlen genaralt paros random szam pedig a kovetkezo: ${Randomszam + 1}`);
+}
+else{
+
+document.write(`Az on altal megadott intervallum(${interVallumalso}-${interVallumfelso}) altal veletlen genaralt paros random szam pedig a kovetkezo: ${Randomszam - 1}`);
+}
+</script>
+
+
+<script>
+//4. feladat
+
+let eletKor=prompt("Add meg az Eletkorodat(1-120):");
+
+if( eletKor < 0 && eletKor >=120)
+{
+document.write("HIBA!<br>Az altalad megadott eletkor hibas!")
+}
+else if( eletKor >= 0 && eletKor <= 6)
+{
+document.write("Kisgyermekkor")
+}
+else if( eletKor >= 6 && eletKor <= 12)
+{
+document.write("Gyermekkor")
+}
+else if( eletKor >= 12 && eletKor <= 16)
+{
+document.write("Serdülőkor")
+}
+else if( eletKor >= 16 && eletKor <= 20)
+{
+document.write("Ifjúkor")
+}
+else if( eletKor >= 20 && eletKor <= 30)
+{
+document.write("Fiatal felnőtt kor")
+}
+else if( eletKor >= 30 && eletKor <= 60)
+{
+document.write("Felnőtt kor")
+}
+else 
+{
+document.write("Aggkor")
+}
+
+
+
+</script>
+
+
+<script>
+//5. feladat
+
+let szam=prompt("Add meg a számot:");
+let oszto=prompt("Add meg a mennyivel szeretned osztani:");
+
+if(szam % oszto == 0)
+{
+document.write(`Az altalad megadott szam(${szam}) maradek nelkul oszthato az altalad megadott szam(${szam})-mal!`);
+
+}
+else{
+document.write(`Az altalad megadott szam(${szam})nem oszthato maradek nelkul a ${oszto}-mal!`);
+}
+</script>
+
+
+
+
+<script>
+//6. feladat
+
+
+for(i = 1 ; i <= 10 ; i++ )
+document.write(` ${i*i} , `);
+
+
+
+
+
+
+</script>
+
+
+
+
