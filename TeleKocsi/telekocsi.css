@@ -61,3 +61,6 @@ p{
 input{
     display:block;
 }
+table{
+    margin: 0px auto;
+}

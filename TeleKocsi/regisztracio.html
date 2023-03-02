@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,55 +8,69 @@
     <title>Telekocs</title>
     <link rel="stylesheet" href="telekocsi.css">
 </head>
+
 <body>
-<div class="tartalom">
-<h1>Telekocsi!</h1>
-<div class="menu">
-    <ul>
-        <li><a href="telekocsi.html">Bemutatkozás</a></li>
-        <li>Sofőröknek</li>
-        <li>Utasoknak</li>
-        <li>Bejelentkezés</li> 
-        <li>Regisztráció</li>
-    </ul>
-</div>
-<h2>Regisztráció</h2>
-<form>
-    <label for="Nev">Nev:</label><br>
-    <input type="text">
-    <label for="Email">Email-cim:</label>
-    <input type="email">
-    <label for="Jelszo">Jelszo:</label>
-    <input type="password" id="j1" value="">
-    <label for="Jelszo2">Jelszo ismet:</label>
-    <input type="password" id="j2" value="">
-    <input type="button" value="Mentes!" id="Gomb">
-</form>
-</div>
+    <div class="tartalom">
+        <h1>Telekocsi!</h1>
+        <div class="menu">
+            <ul>
+                <li><a href="telekocsi.html">Bemutatkozás</a></li>
+                <li>Sofőröknek</li>
+                <li>Utasoknak</li>
+                <li>Bejelentkezés</li>
+                <li>Regisztráció</li>
+            </ul>
+        </div>
+        <h2>Regisztráció</h2>
+        
+            <form>
+                <table>
+                <tr>
+                    <td><label for="Nev">Nev:</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td> <label for="Email">Email-cim:</label></td>
+                    <td> <input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></td>
+                </tr>
+                <tr>
+                    <td> <label for="Jelszo">Jelszo:</label></td>
+                    <td>  <input type="password" id="j1" value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="Jelszo2">Jelszo ismet:</label></td>
+                    <td><input type="password" id="j2" value=""></td>
+                </tr>
+                <tr><td><input type="submit" value="Mentes!" id="Gomb"></td></tr>
+            </table>
+            </form>
+    </div>
+    <script>
+        Gomb.addEventListener("click", ellenőr);
+        function ellenőr() {
+            let Jelszo = document.querySelector("#j1").value;
+            let Jelszo2 = document.querySelector("#j2").value;
+            if (vanE(Jelszo) == true || vanE(Jelszo2) == true) {
+                alert("Nincs kitoltve");
+            }
+            else if (Jelszo !== Jelszo2) {
+                alert("Nem egyezzik");
+            }
+            else {
+                alert('Sikeres Regisztracio')
+            }
+        }
 
-<script>
-Gomb.addEventListener("click",ellenőr);
 
-function ellenőr(){
-let Jelszo=document.querySelector("j1").value;
-let Jelszo2=document.querySelector("j2").value;
-if(vanE(Jelszo)==true && vanE(Jelszo2)==true){
-    alert("Nincs kitoltve");
-}
-else if (Jelszo!==Jelszo2) {
-    alert("Nem egyezzik");
-} 
-}
-
-
-function vanE(vizsgaltErtek){
-            if(vizsgaltErtek.length==0){
+        function vanE(vizsgaltErtek) {
+            if (vizsgaltErtek.length == 0) {
                 return true;
             }
             return false;
         }    
-</script>
+    </script>
 
-    
+
 </body>
+
 </html>
