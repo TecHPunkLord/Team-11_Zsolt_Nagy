@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sárgatúró</title>
     <link rel="stylesheet" href="turo.css">
-    <script src="turo.js"></script>
+    
 </head>
 
 <body>
@@ -85,11 +85,9 @@
     fodb.addEventListener("change",szamol);
     function szamol(){
     let adagok = document.querySelector("#fodb").value;
-    //let tej = Number(document.querySelector("#tej"))
     document.querySelector("#tej").innerHTML=adagok*0.2;
     document.querySelector("#tojas").innerHTML=adagok*2;
     document.querySelector("#cukor").innerHTML=adagok*1;
-    
     }
     </script>
 </body>
